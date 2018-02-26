@@ -28,6 +28,10 @@
       transform: translate(0, 20px) rotateY(90deg);
       -webkit-transform: translate(0, 20px) rotateY(90deg);
     }
+    a
+    {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body style="background: #ffffff">
@@ -48,30 +52,30 @@
 
 <div class="container" style="margin-top: 20px">
   <div class="row card-columns">
-    <div class="col-sm-4 elemcard turnCSS">
+    <div class="col-sm-4">
        <div class="card wow fadeInLeft" style="background: #ffffff">
-          <img class="card-img-top img-fluid  img-responsive" src="images/ISTE.jpg" alt="First Award">
+          <img class="card-img-top img-fluid  img-responsive elemcard turnCSS" src="images/icon_image_ta.png" alt="https://play.google.com/store/apps/details?id=actio.ashcompany.com.travelagentv11">
           <div class="card-block">
-          <h3 style="color: #000000;margin-left: 10px">ISTE</h3>
-          <p class="card-text" style="color: #000000;margin-left: 10px">My first recognition.</p>
+          <h3 style="color: #000000;margin-left: 10px"><a href="https://play.google.com/store/apps/details?id=actio.ashcompany.com.travelagentv11" target="_blank">Travel Agent</a></h3>
+          <p class="card-text" style="color: #000000;margin-left: 10px">My first app and I love to travel <3</p>
           </div>
       </div>
     </div>
-    <div class="col-sm-4  elemcard turnCSS">
+    <div class="col-sm-4">
      <div class="card text-left wow fadeInLeft" data-wow-delay="1s" style="background: #ffffff">
-          <img class="card-img-top img-fluid img-responsive" src="images/ZOHO.jpg" alt="Zoho">
+          <img class="card-img-top img-fluid img-responsive elemcard turnCSS" src="images/ZOHO.jpg" alt="https://www.zoho.com">
             <div class="card-block">
           <h3 style="color: #000000;margin-left: 10px">Zoho</h3>
           <p class="card-text" style="color: #000000;margin-left: 10px">A home away from home.</p>
           </div>
       </div>
     </div>
-    <div class="col-sm-4  elemcard turnCSS">
+    <div class="col-sm-4">
        <div class="card wow fadeInLeft" data-wow-delay="2s" style="background: #ffffff">
-            <img class="card-img-top img-responsive elemcard turnCSS" src="images/TCS.jpg" alt="Recent Award">
+            <img class="card-img-top img-responsive elemcard turnCSS" src="images/icon_image_c.png" alt="https://play.google.com/store/apps/details?id=com.hpinc.voter">
             <div class="card-block">
-            <h3 style="color: #000000;margin-left: 10px">TCS</h3>
-            <p class="card-text" style="color: #000000;margin-left: 10px">My recent recognition.</p>
+            <h3 style="color: #000000;margin-left: 10px"><a href="https://play.google.com/store/apps/details?id=com.hpinc.voter" target="_blank">Cunava</a></h3>
+            <p class="card-text" style="color: #000000;margin-left: 10px">A matter of choice.</p>
             </div>
       </div>
     </div>
@@ -90,22 +94,18 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-//  var CARDWIDTH = 50;
   function turnCSS(elem) {
     $(elem)
         .addClass("flipping")
         .bind("transitionend webkittransitionend", function () { //should add more prefixes
-      //  this.src = src;
         $(this)
             .unbind("transitionend webkittransitionend")
             .removeClass("flipping")
+      //  window.open(alt)
     })
   }
-
-//  var front = "http://mauricederegt.com/test/solitaire/cards/Kc.jpg"
-//  var back = "http://mauricederegt.com/test/solitaire/cards/back.jpg"
   $(".turnCSS").click(function () {
-  //    var src = this.src == back ? front : back; //for toggling fun
+    //  var alt = this.alt
       turnCSS(this)
   })
   </script>
