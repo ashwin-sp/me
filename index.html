@@ -16,9 +16,7 @@
               </script>
 
   <script type= "text/javascript">
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-    
+    var xhr = new XMLHttpRequest();    
     xhr.addEventListener("readystatechange", function() {
       if(this.readyState === 4) {
         console.log(this.responseText);
