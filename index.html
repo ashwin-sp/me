@@ -26,6 +26,17 @@
     xhr.open("GET", "https://09kln841hl.execute-api.us-east-2.amazonaws.com/default/getListForBlog");
     
     xhr.send();
+
+    xhr = new XMLHttpRequest();    
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        console.log(this.responseText);
+      }
+    });
+    
+    xhr.open("GET", "https://7lkeww11vi.execute-api.us-east-2.amazonaws.com/default/getContentForBlog?start=1024");
+    
+    xhr.send();
   </script>
 
   <style>
