@@ -22,10 +22,10 @@
     
     <!-- After Optimization -->
     <rect x="450" y="50" width="250" height="300" class="memory" rx="10"/>
-    <!-- 450MB usage (45% of container) -->
-    <rect x="450" y="215" width="250" height="135" class="usage-after" opacity="0.8"/>
+    <!-- 200MB usage (20% of container) -->
+    <rect x="450" y="290" width="250" height="60" class="usage-after" opacity="0.8"/>
     <text x="575" y="180" text-anchor="middle" class="label">After</text>
-    <text x="575" y="200" text-anchor="middle" class="label">450MB Used</text>
+    <text x="575" y="200" text-anchor="middle" class="label">200MB Used</text>
     
     <!-- 1GB Limit Line for After -->
     <line x1="450" y1="50" x2="700" y2="50" class="limit-line"/>
