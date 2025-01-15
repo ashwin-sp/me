@@ -1,6 +1,7 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Initialize GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
-
 // Hero section animations
 gsap.from('.hero-title', {
     duration: 1,
@@ -8,7 +9,6 @@ gsap.from('.hero-title', {
     opacity: 0,
     ease: 'power4.out'
 });
-
 gsap.from('.hero-subtitle', {
     duration: 1,
     y: 50,
@@ -16,23 +16,24 @@ gsap.from('.hero-subtitle', {
     delay: 0.3,
     ease: 'power4.out'
 });
-
 // Work items animations
-gsap.utils.toArray('.work-item').forEach(item => {
-    gsap.from(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'top center',
-            scrub: 1
-        },
-        y: 100,
-        opacity: 0
-    });
+const workItems = gsap.utils.toArray('.work-item');
+workItems.forEach((item) => {
+    if (item instanceof Element) {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top bottom',
+                end: 'top center',
+                scrub: 1
+            },
+            y: 100,
+            opacity: 0
+        });
+    }
 });
-
 // Animate case studies on scroll
-document.querySelectorAll('.case-study').forEach((study, index) => {
+document.querySelectorAll('.case-study').forEach((study) => {
     gsap.from(study, {
         opacity: 0,
         y: 50,
@@ -45,7 +46,6 @@ document.querySelectorAll('.case-study').forEach((study, index) => {
         }
     });
 });
-
 // Animate diagrams with a slight delay
 document.querySelectorAll('.case-study-diagram').forEach((diagram) => {
     gsap.from(diagram, {

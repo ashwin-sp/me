@@ -21,21 +21,24 @@ gsap.from('.hero-subtitle', {
 });
 
 // Work items animations
-gsap.utils.toArray('.work-item').forEach((item: Element) => {
-    gsap.from(item, {
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'top center',
-            scrub: 1
-        },
-        y: 100,
-        opacity: 0
-    });
+const workItems = gsap.utils.toArray('.work-item');
+workItems.forEach((item) => {
+    if (item instanceof Element) {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top bottom',
+                end: 'top center',
+                scrub: 1
+            },
+            y: 100,
+            opacity: 0
+        });
+    }
 });
 
 // Animate case studies on scroll
-document.querySelectorAll('.case-study').forEach((study: Element, index: number) => {
+document.querySelectorAll('.case-study').forEach((study: Element) => {
     gsap.from(study, {
         opacity: 0,
         y: 50,

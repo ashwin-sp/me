@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Production build
-dist/
-
 # TypeScript cache
 *.tsbuildinfo
 
@@ -36,6 +33,9 @@ yarn-error.log*
 
 # Coverage directory used by tools like istanbul
 coverage/
+
+# Source maps
+*.map
 
 # Misc
 .DS_Store
