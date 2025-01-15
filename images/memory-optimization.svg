@@ -1,0 +1,43 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; }
+        .label { font-family: 'Space Grotesk', sans-serif; font-size: 16px; }
+        .memory { fill: white; stroke: #000; stroke-width: 3; }
+        .usage-before { fill: #FF4444; }
+        .usage-after { fill: #28C840; }
+        .limit-line { stroke: #000; stroke-width: 2; stroke-dasharray: 5,5; }
+        .limit-label { font-family: 'Space Grotesk', sans-serif; font-size: 14px; fill: #666; }
+    </style>
+    
+    <!-- Before Optimization -->
+    <rect x="100" y="50" width="250" height="300" class="memory" rx="10"/>
+    <!-- More than 1GB usage (exceeding container) -->
+    <rect x="100" y="30" width="250" height="320" class="usage-before" opacity="0.8"/>
+    <text x="225" y="180" text-anchor="middle" class="label" fill="white">Before</text>
+    <text x="225" y="200" text-anchor="middle" class="label" fill="white">More than 1GB Used</text>
+    
+    <!-- 1GB Limit Line for Before -->
+    <line x1="100" y1="50" x2="350" y2="50" class="limit-line"/>
+    <text x="80" y="55" text-anchor="end" class="limit-label">1GB Limit</text>
+    
+    <!-- After Optimization -->
+    <rect x="450" y="50" width="250" height="300" class="memory" rx="10"/>
+    <!-- 450MB usage (45% of container) -->
+    <rect x="450" y="215" width="250" height="135" class="usage-after" opacity="0.8"/>
+    <text x="575" y="180" text-anchor="middle" class="label">After</text>
+    <text x="575" y="200" text-anchor="middle" class="label">450MB Used</text>
+    
+    <!-- 1GB Limit Line for After -->
+    <line x1="450" y1="50" x2="700" y2="50" class="limit-line"/>
+    <text x="430" y="55" text-anchor="end" class="limit-label">1GB Limit</text>
+    
+    <!-- Arrow -->
+    <path d="M370 200 L430 200" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+</svg> 

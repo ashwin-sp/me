@@ -1,0 +1,46 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- System Architecture -->
+    <style>
+        .title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; }
+        .label { font-family: 'Space Grotesk', sans-serif; font-size: 16px; }
+        .box { fill: white; stroke: #000; stroke-width: 3; }
+        .arrow { stroke: #000; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+    
+    <!-- Main Components -->
+    <rect x="300" y="100" width="200" height="100" class="box" rx="10"/>
+    <text x="400" y="150" text-anchor="middle" class="label">Integration Manager</text>
+    
+    <!-- Retry System -->
+    <rect x="100" y="250" width="150" height="80" class="box" rx="10"/>
+    <text x="175" y="290" text-anchor="middle" class="label">Retry System</text>
+    
+    <!-- Token Manager -->
+    <rect x="325" y="250" width="150" height="80" class="box" rx="10"/>
+    <text x="400" y="290" text-anchor="middle" class="label">Token Manager</text>
+    
+    <!-- Health Monitor -->
+    <rect x="550" y="250" width="150" height="80" class="box" rx="10"/>
+    <text x="625" y="290" text-anchor="middle" class="label">Health Monitor</text>
+    
+    <!-- Connections -->
+    <path d="M400 200 L175 250" class="arrow"/>
+    <path d="M400 200 L400 250" class="arrow"/>
+    <path d="M400 200 L625 250" class="arrow"/>
+    
+    <!-- External Systems -->
+    <rect x="100" y="400" width="600" height="80" class="box" rx="10"/>
+    <text x="400" y="445" text-anchor="middle" class="label">Third-Party Integration Layer</text>
+    
+    <!-- Connecting Lines -->
+    <path d="M175 330 L175 400" class="arrow"/>
+    <path d="M400 330 L400 400" class="arrow"/>
+    <path d="M625 330 L625 400" class="arrow"/>
+</svg> 

@@ -1,0 +1,22 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "ashwin.me in the making",
+  "main": "dist/js/main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && serve ."
+  },
+  "keywords": [],
+  "author": "Ashwin Suresh Babu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/gsap": "^3.0.0",
+    "serve": "^14.2.4",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

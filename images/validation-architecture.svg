@@ -1,0 +1,40 @@
+<svg width="800" height="700" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; }
+        .label { font-family: 'Space Grotesk', sans-serif; font-size: 16px; }
+        .layer { fill: white; stroke: #000; stroke-width: 3; }
+        .arrow { stroke: #000; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+    
+    <!-- Input Data -->
+    <rect x="300" y="50" width="200" height="60" class="layer" rx="10"/>
+    <text x="400" y="85" text-anchor="middle" class="label">Input Data</text>
+    
+    <!-- Layer 1: HTML Sanitization -->
+    <rect x="200" y="160" width="400" height="80" class="layer" rx="10"/>
+    <text x="400" y="205" text-anchor="middle" class="label">Layer 1: HTML Sanitization</text>
+    
+    <!-- Layer 2: Field Rules -->
+    <rect x="200" y="290" width="400" height="80" class="layer" rx="10"/>
+    <text x="400" y="335" text-anchor="middle" class="label">Layer 2: Field-Specific Rules</text>
+    
+    <!-- Layer 3: PII Protection -->
+    <rect x="200" y="420" width="400" height="80" class="layer" rx="10"/>
+    <text x="400" y="465" text-anchor="middle" class="label">Layer 3: PII Protection</text>
+    
+    <!-- Validated Output -->
+    <rect x="300" y="550" width="200" height="60" class="layer" rx="10"/>
+    <text x="400" y="585" text-anchor="middle" class="label">Validated Output</text>
+    
+    <!-- Flow Arrows -->
+    <path d="M400 110 L400 160" class="arrow"/>
+    <path d="M400 240 L400 290" class="arrow"/>
+    <path d="M400 370 L400 420" class="arrow"/>
+    <path d="M400 500 L400 550" class="arrow"/>
+</svg> 
